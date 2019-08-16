@@ -1,0 +1,48 @@
+{
+  "name": "oopen",
+  "version": "0.1.0",
+  "description": "Open files esyly",
+  "esy": {
+    "build": "refmterr dune build -p #{self.name}",
+    "NOTE": "Optional release Section. Customizes result of `esy release`",
+    "release": {
+      "releasedBinaries": [
+        "oopen"
+      ]
+    },
+    "buildEnv": {
+      "ODOC_SYNTAX": "re"
+    }
+  },
+  "buildDirs": {
+    "bin": {
+      "require": [
+        "open"
+      ],
+      "bin": {
+        "oopen": "oopen.re"
+      }
+    }
+  },
+  "scripts": {
+    "start": "esy x oopen #{self.target_dir}/default/_doc/_html/index.html",
+    "doc": "esy dune build @doc",
+    "doc-path": "esy echo #{self.target_dir}/default/_doc/_html/index.html"
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": "*",
+    "@opam/dune": "*",
+    "@opam/open": "0.2.2",
+    "ocaml": "~4.7.0",
+    "refmterr": "*"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "ocaml": "~4.7.0",
+    "@opam/odoc": "*",
+    "pesy": "*"
+  },
+  "resolutions": {
+    "pesy": "esy/pesy#3d8a18385e07fa11daabe811814fae3f869ad355"
+  }
+}

@@ -1,9 +1,10 @@
 {
-  "name": "@ulrikstrid/oopen",
-  "version": "1.0.0",
+  "name": "@reason-native-web/oopen",
+  "version": "1.0.1",
   "description": "Open files esyly",
+  "private": false,
   "esy": {
-    "build": "refmterr dune build -p #{self.name}",
+    "build": "refmterr dune build -p oopen",
     "NOTE": "Optional release Section. Customizes result of `esy release`",
     "release": {
       "releasedBinaries": [

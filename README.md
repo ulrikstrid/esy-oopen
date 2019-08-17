@@ -9,7 +9,7 @@ Add this to your package.json/esy.json:
 ```json
 {
   "devDependencies": {
-    "@ulrikstrid/oopen": "*"
+    "@reason-native-web/oopen": "*"
   }
 }
 ```
@@ -25,7 +25,7 @@ Then use `esy oopen your_file.html` to open a html file in your browser of chois
     "open-docs": "esy oopen #{self.target_dir}/default/_doc/_html/index.html"
   },
   "devDependencies": {
-    "@ulrikstrid/oopen": "*"
+    "@reason-native-web/oopen": "*"
   }
 }
 ```

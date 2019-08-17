@@ -1,0 +1,6 @@
+_esy
+.ci
+.node_modules
+*.install
+esy.lock
+.gitingore

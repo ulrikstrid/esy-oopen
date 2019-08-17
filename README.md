@@ -1,13 +1,33 @@
-# oopen
+# oopen - OCaml-open
 
 [esy](https://github.com/esy/esy)ly open files, a verry thin wrapper around [ocaml-open](https://github.com/smolkaj/ocaml-open)
 
 ## Usage
 
-Open any html file
+Add this to your package.json/esy.json:
 
-`esy x oopen index.html`
+```json
+{
+  "devDependencies": {
+    "@ulrikstrid/oopen": "*"
+  }
+}
+```
 
-Open odocs-generated documentation in esy projects
+Then use `esy oopen your_file.html` to open a html file in your browser of choise.
 
-`esy x oopen #{self.target_dir}/default/_doc/_html/index.html`
+## Usage with [odoc](https://github.com/ocaml/odoc)
+
+```json
+{
+  "scripts": {
+    "docs": "esy dune build @doc",
+    "open-docs": "esy oopen #{self.target_dir}/default/_doc/_html/index.html"
+  },
+  "devDependencies": {
+    "@ulrikstrid/oopen": "*"
+  }
+}
+```
+
+Then run `esy docs && esy open-docs` to build and open the docs.
